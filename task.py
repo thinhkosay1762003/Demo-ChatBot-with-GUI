@@ -34,9 +34,11 @@ def find_on_wikipedia(message):
     for i in infor:
         if i not in ignore_word:
             search=search+' '+ i
-    information = wikipedia.summary(search,sentences=3)
-    return information
-
+    try:
+        information = wikipedia.summary(search,sentences=3)
+        return information
+    except Exception as e:
+        return f"Không tìm thấy thông tin liên quan: {e}"
 
 def translate_text(text, target_language='en'):
     translator = Translator()
@@ -158,32 +160,25 @@ def find_code(message):
     content = requests.get(url, headers=headers, params=parameters).text
     soup = BeautifulSoup(content, 'html.parser')
     search = soup.find(id='search')
-    first_link = search.find('a')
+    if search:
+        first_link = search.find('a')
+        if first_link:
+            first_link_url = first_link['href']
+            response = requests.get(first_link_url)
+            if response.status_code == 200:
+                soup = BeautifulSoup(response.text, 'html.parser')
+                code = soup.find_all('pre', class_='brush:cpp;')
 
-    if first_link:
-        first_link_url = first_link['href']
-        response = requests.get(first_link_url)
-        if response.status_code == 200:
-            soup = BeautifulSoup(response.text, 'html.parser')
-            code = soup.find_all('pre', class_='brush:cpp;')
+                if not code:
+                    code = soup.find_all('pre', class_='brush:python;')
 
-            if not code:
-                code = soup.find_all('pre', class_='brush:python;')
+                if not code:
+                    code = soup.find_all('pre', class_='brush:java;')
 
-            if not code:
-                code = soup.find_all('pre', class_='brush:java;')
-
-            if code:
-                result = code[-1].get_text()
-                return(f"Đây là hướng dẫn cho {message} của bạn:\n {result}")
-
-            else:
-                return "Xin lỗi tôi không có hướng dẫn cho đoạn code này."
-        else:
-            return "Xin lỗi tôi không có hướng dẫn cho đoạn code này."
-    else:
+                if code:
+                    result = code[-1].get_text()
+                    return(f"Đây là hướng dẫn cho {message} của bạn:\n {result}")
         return "Xin lỗi tôi không có hướng dẫn cho đoạn code này."
-
 
 
 

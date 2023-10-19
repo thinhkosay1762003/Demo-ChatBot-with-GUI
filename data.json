@@ -1,0 +1,140 @@
+{"du_lieu": [
+        {"tag": "greeting",
+         "mau_cau": ["Xin chào", "Chào bạn", "Hi", "Hello", "Có ai ở đó không","Tôi cần trợ giúp"],
+         "tra_loi": ["Chào mừng trở lại, tôi có thể giúp gì bạn.", "Xin chào! Tôi có thể giúp gì cho bạn hôm nay." ]
+        },
+        {"tag": "function",
+          "mau_cau": ["Bạn có thể làm gì", "Tôi có thể hỏi bạn những gì", "Bạn có chức năng gì", "Pbot có thể làm gì", "Chatbot có thể trả lời câu hỏi nào"],
+          "tra_loi": ["Một số chức năng của tôi để bạn có thể làm quen\n 1:Trả lời các câu hỏi liên quan tới thủ tục, vị trí các toà nhà, giờ hoạt động của các phòng ở trường\n 2:Trả lời các câu hỏi đa dạng chủ đề như 'Mạng Neuron là gì','Alber Einstein là ai',...\n 3:Dịch thuật đa ngôn ngữ\n 4:Cung cấp các tài liệu môn học cần thiết\n 5:Tìm kiếm một thông tin nào đó trên Google, Youtube\n 6:Nhắc nhở lịch hẹn của bạn\nVà một số chức năng nữa" ]
+
+        },
+        {"tag": "name",
+         "mau_cau": ["Tên của bạn là gì", "Bạn được gọi là gì", "Tôi nên gọi bạn là gì", "Làm ơn cho tôi biết tên của bạn"],
+         "tra_loi": ["Tôi là P Bot - Chat bot hỗ trợ học tập cho sinh viên PTIT.", "Tên của tôi là P Bot, một trợ lý ảo phục vụ cho cộng đồng sinh viên PTIT.","Tôi là P Bot, dành riêng cho các bạn sinh viên tại PTIT để giúp bạn tìm kiếm thông tin và giải quyết các vấn đề học tập."]
+        },
+        {"tag": "creator",
+         "mau_cau": ["Ai là người tạo ra bạn", "Ai là người phát triển bạn", "Ai thiết kế bạn", "Bạn được tạo bởi ai", "Người đã lập trình bạn là ai"],
+         "tra_loi": ["Tôi được lập ra bởi nhóm sinh viên nhóm 16 lớp Python 07 " ]
+        },
+        {"tag": "tai_lieu",
+         "mau_cau": ["Tôi cần tìm tài liệu", "Tôi muốn tìm tài liệu môn học", "Bạn có thể cung cấp cho tôi tài liệu được không", "Bạn có thể cung cấp tôi giáo trình được không"],
+         "tra_loi": []
+        },
+      {
+      "tag": "principle",
+      "mau_cau": ["Ai là hiệu trưởng của trường", "Người đứng đầu PTIT là ai", "Hiệu trưởng của PTIT là ai", "Ai hiện đang lãnh đạo học viện"],
+      "tra_loi" : ["Hiệu trưởng của trường là GS.TS Từ Minh Phương", "Hiện tại, GS.TS Từ Minh Phương đang là hiệu trưởng của học viện, người cũng là Bí thư Đảng uỷ và Chủ tịch Hội đồng Học viện"]
+      },
+      {"tag": "wikipedia",
+         "mau_cau": ["giải thích cho tôi", "là ai", "là gì","cái gì", "con gì", "cho tôi khái niệm","cho tôi biết"],
+         "tra_loi": []
+        },
+      {"tag": "dich_thuat",
+         "mau_cau": ["Hãy dịch cho tôi", "Dịch cho tôi", "dịch sang","chuyển đổi ngôn ngữ", "Hãy dịch đoạn văn sau"],
+         "tra_loi": []
+        },
+      {"tag": "vanphong1cua_giomocua",
+        "mau_cau":["Văn phòng một cửa hoạt động lúc nào", "Tôi có thể đến văn phòng 1 cửa khi nào", "Giờ hoạt động của văn phòng 1 cửa"],
+        "tra_loi": ["Văn phòng 1 cửa hoạt động buổi sáng từ 8h30 tới 11h30; Buổi chiều từ 14h00 tới 16h30 các ngày làm việc. Bộ phận kế toán hoạt động từ 9h tới 11h các ngày thứ 7 "]
+
+      },
+      {"tag": "toa_nha_a1",
+      "mau_cau": ["Toà nhà A1 là gì", "toà a1 nằm ở đâu", "giới thiệu về toà nhà A1", "nhà hiệu bộ nằm đâu"],
+      "tra_loi": ["Tòa nhà A1 (hay còn gọi là Nhà hiệu bộ) - là nơi các bạn học Multi Media sẽ được thực hành các phòng chức năng ở tòa nhà này đó. Toà A1 nằm bên phải ngay từ cổng trường"]},
+      {"tag": "toa_nha_a3",
+      "mau_cau": ["Toà nhà A3 là gì", "toà a3 nằm ở đâu", "giới thiệu toà a3", "trung tâm thí nghiệm thực hành nằm đâu", "thực hành ở khu nào"],
+      "tra_loi": ["Toà nhà A3(trung tâm thí nghiệm thực hành) có các phòng học ở 3 tầng dưới và phòng thực hành cho các môn ngành kĩ thuật từ tầng 4 trở lên, đây cũng là nơi để các bạn thi những môn liên quan tới máy tính.\nToà nhà nằm phía sau khu A2 và ngay cạnh phòng thư viện."]},
+      {"tag": "vanphong1cua",
+        "mau_cau":["Văn phòng 1 cửa nằm ở đâu", "Tôi có thể tìm văn phòng một cửa ở đâu","Văn phòng một cửa là gì","Văn phòng một cửa có chức năng gì"],
+        "tra_loi": ["Văn phòng một cửa giúp đỡ sinh viên và phụ huynh đến liên hệ, giải quyết các thủ tục hành chính. Văn phòng một cửa nằm ở phía bên phải từ cổng vào ở Cơ sở Hà Đông ."]
+      },
+      {"tag": "toa_nha_a2",
+      "mau_cau": ["Toà nhà A2 là gì", "toà a2 nằm ở đâu", "giới thiệu về toà nhà A2", " hội trường a2"],
+      "tra_loi": ["Tòa nhà A2 (là toà nhà cao nhất gồm 10 tầng học và 1 tầng hầm G) là toà nhà chính,ngay đối diện từ cổng nhìn vào, phục vụ chức năng dạy học, khảo thí, bảo vệ, phòng nghỉ giáo viên.\nToà A2 cũng có một hội trường A2 phục vụ cho tập huấn, phổ biến thông tin cho sinh viên, tổ chức sự kiện"]},
+
+      {"tag": "phan_loai_gpa",
+        "mau_cau": ["phân loại gpa", "cách phân bố điểm", "gpa được tính như nào","gpa là gì"],
+        "tra_loi": ["GPA là một hệ thống điểm dựa trên thành tích học tập của sinh viên dựa trên thang điểm từ 0 đến 4.\nGPA đượcc phân loại như sau:\n -1.0:Kém\n -1.0 - 2.0: Yếu\n -2.0 - 2.49:Trung bình\n -2.5 -3.19:Khá\n -3.2 - 3.59:Tốt\n -3.6 -4.0:Xuất sắc  "]
+      },
+      {"tag": "thu_vien",
+        "mau_cau": ["Học viện có thư viện không", "Tôi có thể mượn sách ở đâu", "Tôi có thể mượn giáo trình ở đâu","Tôi có thể ngồi tự học ở đâu" ],
+        "tra_loi": ["Thư viện PTIT là nơi có thể cung cấp tài liệu các môn học cho sinh viên Học viện cũng như không gian và thiết bị cho sinh viên tự học và lập trình.\nThư viện nằm ở phía sau toà A2, cạnh Trung tâm thí nghiệm thực hành.\nBạn hãy nhớ đem theo thẻ sinh viên để được phép vào. "]
+      },
+  {
+    "tag": "thuvien_giomocua",
+    "mau_cau": ["Khi nào tôi có thể vào thư viện", "Giờ mở cửa ở thư viện", "Thư viện đóng cửa lúc nào"],
+    "tra_loi": ["Thư viện luôn hỗ trợ tốt nhất thời gian cho sinh viên có thể học tập và ôn thi.\nTừ thứ 2 đến thứ 6:\n Sáng:8h00 - 11h30\n Chiều:1h30 - 19h30\nThứ 7:\n Sáng:8h00 - 11h30\n Chiều:13h30 - 17h00"]
+  },
+  {
+    "tag": "youtube",
+    "mau_cau": ["Tìm trên youtube","mở cho tôi video về", "Tìm tôi video trên youtube"],
+    "tra_loi": []
+  },
+  {
+    "tag": "google",
+    "mau_cau": ["Tì,m trên google","mở google cho tôi", "tìm kiếm trên google"],
+    "tra_loi": []
+  },
+  {
+    "tag": "practice_code",
+    "mau_cau": ["Tôi muốn luyện khả năng code", "Tôi muốn làm bài tập code ptit", "Tôi muốn code", "Mở codeptit"],
+    "tra_loi": []
+  },
+
+  {
+    "tag": "tutor",
+    "mau_cau": ["Hướng dẫn tôi", "Chỉ tôi", "Dạy cho tôi", "Cách để","làm thế nào"],
+    "tra_loi": []
+  },
+  {
+    "tag": "answer_code",
+    "mau_cau": ["Viết chương trình","Sử dụng c++", "Bằng java", "Hãy sử dụng python", "Tạo một đoạn lệnh", "Tạo chương trình"],
+    "tra_loi": []
+  },
+  {
+    "tag": "bao_thuc",
+    "mau_cau": ["Đặt tôi báo thức vào lúc","Nhắc nhở tôi vào giờ phút"," Hãy đặt lịch hẹn vào lúc"],
+    "tra_loi": []
+  }
+
+],
+  "nhiem_vu": [
+    {
+      "tag": "tai_lieu",
+      "mission": "find_document"
+    },
+    {
+      "tag": "wikipedia",
+      "mission" : "find_on_wikipedia"
+    },
+    {
+      "tag": "dich_thuat",
+      "mission": "dich_thuat"
+    },
+    {
+      "tag": "google",
+      "mission": "find_on_google"
+    },
+    {
+      "tag": "youtube",
+      "mission": "find_on_youtube"
+    },
+    {
+      "tag": "practice_code",
+      "mission": "open_code_ptit"
+    },
+
+    {
+      "tag": "tutor",
+      "mission": "search_wikihow"
+    },
+    {
+      "tag": "answer_code",
+      "mission": "find_code"
+    },
+    {
+      "tag": "bao_thuc",
+      "mission": "schedule_alarm"
+    }
+  ]
+}

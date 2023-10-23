@@ -1,16 +1,11 @@
 import webbrowser as wb
 from unidecode import unidecode
 import wikipedia
-from pyvi import ViTokenizer
 from googletrans import Translator
-import datetime
 import requests
 from bs4 import BeautifulSoup
 import re
-import schedule
-import time
-import threading
-from tkinter import messagebox
+
 
 def find_document(message):
     ignore_word = ['cho','tôi','tài','liệu','môn','học','giáo','trình','cung','cấp','bài','giảng','tìm']
@@ -39,6 +34,7 @@ def find_on_wikipedia(message):
         return information
     except Exception as e:
         return f"Không tìm thấy thông tin liên quan: {e}"
+
 
 def translate_text(text, target_language='en'):
     translator = Translator()
@@ -69,13 +65,10 @@ def dich_thuat(message):
         "nga": "ru",
         "trung": "zh-cn"
     }
-
     non_translate_string = re.sub(r'"(.*?)"', '', message)
-
     translated_text = text_to_translate  # Initialize translated_text with the original text
-
     for language in language_codes:
-        if language in non_translate_string:
+        if language in non_translate_string.lower():
             translated_text = translate_text(text_to_translate, language_codes[language])
 
     return f"Đoạn văn bản được dịch thành:\n{translated_text}"
@@ -108,8 +101,7 @@ def open_code_ptit(message):
     url="https://code.ptit.edu.vn/student/question"
     wb.get().open(url)
     return "Tất nhiên rồi, đây là bài tập trên Code Ptit để bạn có thể luyện thêm khả năng code.\nNgoài ra bạn có thể tham khảo tử CodeLearn, CodeAcademy, LeetCode để trao dồi thêm."
-def show(message):
-    print("Đánh giá hôm nay của bạn trên Code PTIT\n")
+
 def search_wikihow(message):
     tutor = f"Đây là hướng dẫn cho {message}:\n"
     base_url = "https://www.wikihow.vn"
@@ -180,5 +172,42 @@ def find_code(message):
                     return(f"Đây là hướng dẫn cho {message} của bạn:\n {result}")
         return "Xin lỗi tôi không có hướng dẫn cho đoạn code này."
 
+def solve_math_problem(sentence):
+    ignore_words = ["tính", "thực", "hiện", "phép", "toán", "cho", "tôi", "kết", "quả", "bằng", "mấy", "của", "giá", "trị"]
+    if "căn bậc" in sentence:
+        pattern = r"căn bậc (\d+) của (\d+)"
+        match = re.search(pattern, sentence)
+        if match:
+            a = int(match.group(1))
+            b = int(match.group(2))
+            try:
+                result = b ** (1 / a)
+                sentence = re.sub(pattern, str(result), sentence)  # Chuyển kết quả thành chuỗi trước khi thay thế
+            except:
+                return "Phép toán bạn nhập bị lỗi, hảy thử lại"
+        else:
+            return "Phép toán bạn nhập bị lỗi, hảy thử lại"
+
+    cleaned_input = ""
+    lst = sentence.split()
+    for i in lst:
+        if i.lower() not in ignore_words:
+            cleaned_input += i + " "
+    cleaned_input = cleaned_input.replace('cộng', '+')
+    cleaned_input = cleaned_input.replace('trừ', '-')
+    cleaned_input = cleaned_input.replace('x', '*')
+    cleaned_input = cleaned_input.replace('nhân', '*')
+    cleaned_input = cleaned_input.replace('chia', '/')
+    cleaned_input = cleaned_input.replace('luỹ thừa', '**')
+    cleaned_input = cleaned_input.replace('mũ', '**')
+
+    if not cleaned_input:
+        return "Phép toán bạn nhập bị lỗi, hảy thử lại"
+
+    try:
+        result = eval(cleaned_input)
+        return f'Kết quả của phép toán là {round(result, 2)}'
+    except:
+        return "Phép toán bạn nhập bị lỗi, hãy thử lại"
 
 

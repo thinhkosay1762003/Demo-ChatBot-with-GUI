@@ -5,7 +5,7 @@
         },
         {"tag": "function",
           "mau_cau": ["Bạn có thể làm gì", "Tôi có thể hỏi bạn những gì", "Bạn có chức năng gì", "Pbot có thể làm gì", "Chatbot có thể trả lời câu hỏi nào"],
-          "tra_loi": ["Một số chức năng của tôi để bạn có thể làm quen\n 1:Trả lời các câu hỏi liên quan tới thủ tục, vị trí các toà nhà, giờ hoạt động của các phòng ở trường\n 2:Trả lời các câu hỏi đa dạng chủ đề như 'Mạng Neuron là gì','Alber Einstein là ai',...\n 3:Dịch thuật đa ngôn ngữ\n 4:Cung cấp các tài liệu môn học cần thiết\n 5:Tìm kiếm một thông tin nào đó trên Google, Youtube\n 6:Nhắc nhở lịch hẹn của bạn\nVà một số chức năng nữa" ]
+          "tra_loi": ["Một số chức năng của tôi để bạn có thể làm quen\n 1:Trả lời các câu hỏi liên quan tới thủ tục, vị trí các toà nhà, giờ hoạt động của các phòng ở trường\n 2:Trả lời các câu hỏi đa dạng chủ đề như 'Mạng Neuron là gì','Alber Einstein là ai',...\n 3:Dịch thuật đa ngôn ngữ\n 4:Cung cấp các tài liệu môn học cần thiết\n 5:Tìm kiếm một thông tin nào đó trên Google, Youtube\nVà một số chức năng nữa" ]
 
         },
         {"tag": "name",
@@ -80,7 +80,16 @@
     "mau_cau": ["Tôi muốn luyện khả năng code", "Tôi muốn làm bài tập code ptit", "Tôi muốn code", "Mở codeptit"],
     "tra_loi": []
   },
-
+  {
+    "tag":"the_sinh_vien",
+    "mau_cau": ["tôi muốn làm lại thẻ sinh viên", "cách xin làm lại thẻ sinh viên", "tôi bị mất thẻ sinh viên, tôi nên làm gì"],
+    "tra_loi": ["Trong trường hợp bị mất thẻ sinh viên, bạn nên làm đơn xin cấp lại thẻ có sự xác nhận của Ban cán sự lớp và nộp lại tại Phòng Giáo vụ."]
+  },
+  {
+    "tag": "tinh_toan",
+    "mau_cau": ["tính cho tôi","giải phương trình","tính tôi kết quả của","bằng mấy"],
+    "tra_loi": []
+  },
   {
     "tag": "tutor",
     "mau_cau": ["Hướng dẫn tôi", "Chỉ tôi", "Dạy cho tôi", "Cách để","làm thế nào"],
@@ -89,11 +98,6 @@
   {
     "tag": "answer_code",
     "mau_cau": ["Viết chương trình","Sử dụng c++", "Bằng java", "Hãy sử dụng python", "Tạo một đoạn lệnh", "Tạo chương trình"],
-    "tra_loi": []
-  },
-  {
-    "tag": "bao_thuc",
-    "mau_cau": ["Đặt tôi báo thức vào lúc","Nhắc nhở tôi vào giờ phút"," Hãy đặt lịch hẹn vào lúc"],
     "tra_loi": []
   }
 
@@ -133,8 +137,8 @@
       "mission": "find_code"
     },
     {
-      "tag": "bao_thuc",
-      "mission": "schedule_alarm"
+      "tag": "tinh_toan",
+      "mission": "solve_math_problem"
     }
   ]
 }
